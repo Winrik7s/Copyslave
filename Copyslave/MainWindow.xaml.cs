@@ -19,6 +19,8 @@ namespace Copyslave
 
         private void Windows1_Loaded(object sender, RoutedEventArgs e)
         {
+            Timer.Tick += new EventHandler(Timer_Tick);
+            Timer.Interval = new TimeSpan(0, 0, 1); //1 секунда
             Timer.Start();
         }
 
