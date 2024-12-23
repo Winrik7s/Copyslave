@@ -9,6 +9,8 @@ namespace Copyslave
     /// </summary>
     public partial class MainWindow : Window
     {
+        DispatcherTimer Timer = new DispatcherTimer();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -16,7 +18,7 @@ namespace Copyslave
 
         private void Windows1_Loaded(object sender, RoutedEventArgs e)
         {
-
+            Timer.Start();
         }
     }
 }
